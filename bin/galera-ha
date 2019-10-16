@@ -50,6 +50,12 @@ class SimpleAdapter
       { 'Content-Type' => 'text/plain' },
       body
     ]
+    elsif @synced == 'Donor/Desynced'
+     [
+      503,
+      { 'Content-Type' => 'text/plain' },
+      body
+    ]
     else
      [
      504,
