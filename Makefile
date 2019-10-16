@@ -13,6 +13,11 @@ install:
 	/usr/sbin/chkconfig --add galera-ha
 	/usr/sbin/chkconfig galera-ha on
 
+update:
+	/usr/sbin/service galera-ha stop
+	/usr/bin/install -o root -g root -m 755 bin/galera-ha /usr/local/bin
+	/usr/sbin/service galera-ha start
+
 start:
 	/etc/init.d/galera-ha start
 
